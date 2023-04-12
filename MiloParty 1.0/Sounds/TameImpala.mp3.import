@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TameImpala.mp3-590750ab174556ac5ec27518674c3242.mp3str"
+
+[deps]
+
+source_file="res://Sounds/TameImpala.mp3"
+dest_files=[ "res://.import/TameImpala.mp3-590750ab174556ac5ec27518674c3242.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

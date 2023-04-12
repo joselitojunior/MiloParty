@@ -1,0 +1,217 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://Sounds/ButtonSound.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/classic_memesbruh03.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Images/SpeakerOn.png" type="Texture" id=4]
+[ext_resource path="res://Images/SpeakerOff.png" type="Texture" id=5]
+[ext_resource path="res://Images/Wallpaper/Wallpaper18.png" type="Texture" id=6]
+[ext_resource path="res://Images/Wallpaper/Wallpaper12.png" type="Texture" id=7]
+[ext_resource path="res://Images/Wallpaper/Wallpaper13.png" type="Texture" id=8]
+[ext_resource path="res://Images/Wallpaper/Wallpaper10.png" type="Texture" id=9]
+[ext_resource path="res://Images/Wallpaper/Wallpaper09.png" type="Texture" id=10]
+[ext_resource path="res://Images/Wallpaper/Wallpaper16.png" type="Texture" id=11]
+[ext_resource path="res://Images/Wallpaper/Wallpaper11.png" type="Texture" id=12]
+[ext_resource path="res://Images/Wallpaper/Wallpaper15.png" type="Texture" id=13]
+[ext_resource path="res://Images/Wallpaper/Wallpaper08.png" type="Texture" id=14]
+[ext_resource path="res://Images/Wallpaper/Wallpaper14.png" type="Texture" id=15]
+[ext_resource path="res://Images/Wallpaper/Wallpaper17.png" type="Texture" id=16]
+[ext_resource path="res://Images/Wallpaper/Wallpaper00.png" type="Texture" id=17]
+[ext_resource path="res://Images/Wallpaper/Wallpaper04.png" type="Texture" id=18]
+[ext_resource path="res://Images/Wallpaper/Wallpaper03.png" type="Texture" id=19]
+[ext_resource path="res://Images/Wallpaper/Wallpaper02.png" type="Texture" id=20]
+[ext_resource path="res://Images/Wallpaper/Wallpaper05.png" type="Texture" id=21]
+[ext_resource path="res://Images/Wallpaper/Wallpaper06.png" type="Texture" id=22]
+[ext_resource path="res://Images/Wallpaper/Wallpaper07.png" type="Texture" id=23]
+[ext_resource path="res://Images/Wallpaper/Wallpaper01.png" type="Texture" id=24]
+[ext_resource path="res://Sounds/Genesis.mp3" type="AudioStream" id=25]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Fonts/classic_memesbruh03.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = SubResource( 8 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -7.0 ]
+}
+
+[node name="Genesis" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -10.0
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 9.0
+
+[node name="ButtonSound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 9.0
+
+[node name="ButtonSound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 9.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 76.5, 144.475 )
+scale = Vector2( 0.361667, 0.855177 )
+frames = SubResource( 7 )
+frame = 5
+playing = true
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+margin_right = 176.0
+margin_bottom = 288.0
+color = Color( 0.0588235, 0.470588, 0.505882, 0.0352941 )
+
+[node name="SpeakersButton" type="Button" parent="."]
+margin_left = 152.0
+margin_top = 6.0
+margin_right = 170.0
+margin_bottom = 21.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpeakerOff" type="Sprite" parent="SpeakersButton"]
+visible = false
+position = Vector2( 9, 8 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 5 )
+
+[node name="SpeakerOn" type="Sprite" parent="SpeakersButton"]
+position = Vector2( 9, 8 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 4 )
+
+[node name="Start" type="Label" parent="."]
+modulate = Color( 0.992157, 1, 0.988235, 1 )
+anchor_right = 0.823
+anchor_bottom = 0.853
+margin_left = 69.0
+margin_top = 142.0
+margin_right = -35.848
+margin_bottom = -92.664
+mouse_filter = 0
+custom_fonts/font = SubResource( 1 )
+text = "START"
+align = 1
+valign = 1
+
+[node name="StartBtn" type="Button" parent="Start"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 2.0
+margin_right = 38.0
+margin_bottom = 27.0
+rect_scale = Vector2( 1, 0.38 )
+
+[node name="Quit" type="Label" parent="."]
+modulate = Color( 0.992157, 1, 0.988235, 1 )
+margin_left = 69.0
+margin_top = 174.0
+margin_right = 109.0
+margin_bottom = 188.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "QUIT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="QuitBtn" type="Button" parent="Quit"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 4.0
+margin_top = 4.00002
+margin_right = 64.0
+margin_bottom = 24.0
+rect_scale = Vector2( 0.5, 0.37 )
+
+[node name="About" type="Label" parent="."]
+modulate = Color( 0.992157, 1, 0.988235, 1 )
+margin_left = 69.0
+margin_top = 157.0
+margin_right = 109.0
+margin_bottom = 171.0
+mouse_filter = 1
+custom_fonts/font = SubResource( 1 )
+text = "ABOUT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AboutBtn" type="Button" parent="About"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 3.0
+margin_right = 76.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="Milo" type="Label" parent="."]
+modulate = Color( 0.992157, 1, 0.988235, 1 )
+margin_left = 17.0
+margin_top = 117.0
+margin_right = 177.0
+margin_bottom = 139.0
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 9 )
+text = "Milo Party"
+
+[connection signal="mouse_entered" from="SpeakersButton" to="." method="_on_SpeakersButton_mouse_entered"]
+[connection signal="mouse_exited" from="SpeakersButton" to="." method="_on_SpeakersButton_mouse_exited"]
+[connection signal="pressed" from="SpeakersButton" to="." method="_on_SpeakersButton_pressed"]
+[connection signal="mouse_entered" from="Start" to="." method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="Start" to="." method="_on_Start_mouse_exited"]
+[connection signal="mouse_entered" from="Start/StartBtn" to="." method="_on_StartBtn_mouse_entered"]
+[connection signal="mouse_exited" from="Start/StartBtn" to="." method="_on_StartBtn_mouse_exited"]
+[connection signal="pressed" from="Start/StartBtn" to="." method="_on_StartBtn_pressed"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_Quit_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="." method="_on_Quit_mouse_exited"]
+[connection signal="mouse_entered" from="Quit/QuitBtn" to="." method="_on_QuitBtn_mouse_entered"]
+[connection signal="mouse_exited" from="Quit/QuitBtn" to="." method="_on_QuitBtn_mouse_exited"]
+[connection signal="pressed" from="Quit/QuitBtn" to="." method="_on_QuitBtn_pressed"]
+[connection signal="mouse_entered" from="About" to="." method="_on_About_mouse_entered"]
+[connection signal="mouse_exited" from="About" to="." method="_on_About_mouse_exited"]
+[connection signal="mouse_entered" from="About/AboutBtn" to="." method="_on_AboutBtn_mouse_entered"]
+[connection signal="mouse_exited" from="About/AboutBtn" to="." method="_on_AboutBtn_mouse_exited"]
+[connection signal="pressed" from="About/AboutBtn" to="." method="_on_AboutBtn_pressed"]

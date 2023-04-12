@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I Follow Rivers.mp3-dc05411353b1d000c7f9a0f133878306.mp3str"
+
+[deps]
+
+source_file="res://Sounds/I Follow Rivers.mp3"
+dest_files=[ "res://.import/I Follow Rivers.mp3-dc05411353b1d000c7f9a0f133878306.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

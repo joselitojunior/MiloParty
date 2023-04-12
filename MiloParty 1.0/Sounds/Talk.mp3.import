@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Talk.mp3-18822aab9c2872209f98261c727a5b20.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Talk.mp3"
+dest_files=[ "res://.import/Talk.mp3-18822aab9c2872209f98261c727a5b20.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
